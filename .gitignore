@@ -2,6 +2,7 @@
 .env
 .netlify
 .pnp
+.pnp.js
 dev.db
 dist
 dist-babel
