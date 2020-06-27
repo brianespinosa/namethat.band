@@ -1,7 +1,7 @@
 {
   "private": true,
   "installConfig": {
-    "pnp": true
+    "pnp": false
   },
   "workspaces": {
     "packages": [
