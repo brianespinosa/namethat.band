@@ -1,2 +1,2 @@
-# namethat.band
+# namethatband
 https://namethat.band
