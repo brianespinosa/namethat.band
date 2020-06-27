@@ -1,0 +1,74 @@
+:root {
+  --header-height: 80px;
+  --footer-height: 40px;
+  --global-padding: 1rem;
+  --brand-color: #a66;
+}
+
+/* Putting this global for the grid layout here for easier reference */
+:global #redwood-app {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 300px auto;
+  grid-template-rows: var(--header-height) auto var(--footer-height);
+  grid-template-areas:
+    "header nav"
+    "main main"
+    "footer footer";
+}
+
+/* Links */
+a {
+  color: var(--brand-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Global Padding */
+.Header h1,
+.Nav a,
+.Main,
+.Footer {
+  padding: 0 var(--global-padding);
+}
+
+/* Grid Layout Components */
+.Header {
+  display: contents;
+  grid-area: header;
+  line-height: var(--header-height);
+}
+
+.Header h1 {
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.Header h1 span {
+  font-weight: 300;
+}
+
+.Nav {
+  grid-area: nav;
+}
+
+.Nav a {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.Main {
+  grid-area: main;
+}
+
+.Footer {
+  background-color: #eee;
+  line-height: var(--footer-height);
+  grid-area: footer;
+  text-align: center;
+}
